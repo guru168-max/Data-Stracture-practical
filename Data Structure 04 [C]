@@ -1,0 +1,99 @@
+PROGRAM:-                                              (selection sort)
+#include<stdio.h>
+void main()
+{
+int arr[100],m,temp;
+printf("Enter the array size\n");
+scanf("%d",&m);
+printf("Enter the array elements\n");
+for(int i=0; i<m; i++)
+{
+scanf("%d",&arr[i]);
+}
+for(int i=0; i<m; i++)
+{
+for(int j=0; j<=m; j++)
+{
+if(arr[i]>arr[j])
+{
+temp=arr[i];
+arr[i]=arr[j];
+arr[j]=temp;
+}
+}
+}
+printf("Array after sorting \n");
+for(int i=0; i<m; i++)
+{
+printf("%d\n",arr[i]);
+}
+}
+
+                                  [Bubble Sort]
+PROGRAM:-
+#include<stdio.h>
+void main()
+{
+int a[100],n,temp;
+printf("Enter the array size\n");
+scanf("%d",&n);
+printf("Enter the array element\n");
+for(int i=0; i<n; i++)
+{
+scanf("%d",&a[i]);
+}
+for(int i=0; i<n; i++)
+{
+for(int j=0; j<=n; j++)
+{
+if(a[j]>a[j+1])
+{
+temp=a[j];
+a[j]=a[j+1];
+a[j+1]=temp;
+}
+}
+}
+printf("array aftre sorting is\n");
+for(int i=0; i<n; i++)
+{
+printf("%d\n",a[i]);
+}
+}
+
+                                [B]: Write a program to search any integer in your array using binary search concept.
+PROGRAM:-
+#include<stdio.h>
+void main()
+{
+int i, j, n, mid, low, high, item, found = 0;
+printf("Enter the size of array\n");
+scanf("%d", &n);
+int a[n];
+printf("Enter %d elements:\n", n);
+for (i = 0; i < n; i++)
+{
+scanf("%d", &a[i]);
+}
+printf("Enter element you want to search: \n");
+scanf("%d",&item);
+low = 0,high = n-1;
+for(i=0;i<(n+1)/2;i++){
+mid=(low + high)/2;
+if(item == a[mid]){
+printf("Element found at %d position\n",mid+1);
+found = 1;
+break;
+}
+else if(item < a[mid]){
+high = mid -1;
+}
+else if(item > a[mid]){
+low = mid + 1;
+}
+}
+if(found != 1){
+printf("Element not found :(\n");
+}
+}
+
