@@ -1,0 +1,66 @@
+: Take a number from user and write a program to search a specific number is present or not
+
+#include<stdio.h>
+int main()
+{
+int arr[10], i ,num;
+int found=0;
+printf("enter array elements\n");
+for(i=0;i<10;i++)
+{
+scanf("%d",&arr[i]);
+}
+printf("enter the number you want to find");
+scanf("%d",&num);
+for(i=0;i<10;i++)
+{
+if(num==arr[i])
+{
+printf("The number %d is present in the array",num);
+found=found + 1;
+break;
+}
+}
+if(found==0)
+{
+printf("The number is not found");
+}
+}
+
+
+                           [B]
+PROGRAM:-
+#include<stdio.h>
+int main()
+{
+int i,t,a[10],n,m,s,j=0,b[10];
+printf("\nEnter the Limit:");
+scanf("%d",&n);
+printf("\nEnter the Values:");
+for(i=0;i<n;i++)
+{
+scanf("%d",&a[i]);
+}
+printf("\nGiven values are:");
+for(i=0;i<n;i++)
+{
+printf("a[%d]=%d",i,a[i]);
+}
+printf("\nEnter the position to be update:");
+scanf("%d",&t);
+printf("\nEnter the value to be update:");
+scanf("%d",&s);
+for(i=0;i<n;i++)
+{
+if(i==t)
+{
+a[i]=s;
+}
+}
+printf("\nUpdated value is:");
+for(i=0;i<n;i++)
+{
+printf("\na[%d]=%d",i,a[i]);
+}
+return 0;
+}
