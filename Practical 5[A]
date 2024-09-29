@@ -1,4 +1,4 @@
-//Implement a Stack and perform the stack operations: Push, Pop and Print using Menu Driver Program such as  1.Push, 2.Pop and 3. Print and 4. Exit. [using linklist]
+//Implement a Stack and perform the stack operations: Push, Pop and Print using Menu Driver Program such as  1.Push, 2.Pop and 3. Print and 4. Exit. [using Array]
 #include <stdio.h>
 #define MAX 100
 int stack[MAX];
